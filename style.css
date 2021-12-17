@@ -27,6 +27,7 @@ main {
 
 pre.ast {
 	margin: 0;
+	padding: 4px;
 }
 
 main .editor .cm-editor .cm-scroller {
