@@ -4,17 +4,16 @@ import type { EditorState } from "@codemirror/state"
 import { keymap } from "@codemirror/view"
 import { defaultKeymap } from "@codemirror/commands"
 import { basicSetup } from "@codemirror/basic-setup"
-import { defaultHighlightStyle } from "@codemirror/highlight"
 import { indentUnit } from "@codemirror/language"
 
-import { useCodeMirror } from "./codemirror.js"
-
 import { circomLanguage } from "codemirror-lang-circom"
+import { highlightStyle } from "./highlightStyle.js"
+import { useCodeMirror } from "./codemirror.js"
 
 const extensions = [
 	indentUnit.of("    "),
 	basicSetup,
-	defaultHighlightStyle,
+	highlightStyle,
 	circomLanguage,
 	keymap.of(defaultKeymap),
 ]
